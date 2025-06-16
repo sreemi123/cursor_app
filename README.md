@@ -55,9 +55,3 @@
 
 - `npm start` — Starts the React development server
 - `npm run build` — Builds the React app for production
-
-
-
-
-
--
