@@ -1,0 +1,237 @@
+.control-center {
+  padding: 2rem;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.control-center-header {
+  background: #d6dfff;
+  margin: -2rem -2rem 2rem -2rem;
+  padding: 2rem;
+  color: #202669;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.control-center h2 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #202669;
+}
+
+.admin-welcome {
+  margin: 0.5rem 0 1.5rem;
+  font-size: 1.1rem;
+  opacity: 0.9;
+  color: #202669;
+}
+
+.stats-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.stat-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(32, 38, 105, 0.1);
+  transition: transform 0.2s;
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.control-sections {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.pending-approvals,
+.all-users {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.pending-approvals {
+  border-left: 4px solid #f4530e;
+}
+
+.all-users {
+  border-left: 4px solid #202669;
+}
+
+.pending-approvals h3,
+.all-users h3 {
+  color: #202669;
+  font-size: 1.25rem;
+  margin: 0 0 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.pending-approvals h3 i,
+.all-users h3 i {
+  color: #f4530e;
+}
+
+.table-container {
+  overflow-x: auto;
+  border-radius: 8px;
+  border: 1px solid #edf2f7;
+}
+
+.users-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.users-table th {
+  background: #f8f9fa;
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  color: #202669;
+  white-space: nowrap;
+}
+
+.users-table td {
+  padding: 1rem;
+  border-top: 1px solid #edf2f7;
+  vertical-align: middle;
+}
+
+.users-table tbody tr:hover {
+  background-color: #f8f9fa;
+}
+
+.approve-button {
+  background-color: #f4530e;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background-color 0.2s;
+}
+
+.approve-button:hover {
+  background-color: #d3631e;
+}
+
+.approve-button i {
+  font-size: 0.8rem;
+}
+
+.role-badge,
+.status-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.role-badge.admin {
+  background-color: #202669;
+  color: white;
+}
+
+.role-badge.user {
+  background-color: #e2e8f0;
+  color: #202669;
+}
+
+.status-badge.pending {
+  background-color: #fff3e6;
+  color: #f4530e;
+}
+
+.status-badge.active {
+  background-color: #e6f4ea;
+  color: #28a745;
+}
+
+.error-message,
+.success-message {
+  max-width: 1200px;
+  margin: 1rem auto;
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.error-message {
+  background-color: #fff5f5;
+  color: #dc3545;
+  border: 1px solid #ffebee;
+}
+
+.success-message {
+  background-color: #f0fff4;
+  color: #28a745;
+  border: 1px solid #e6f4ea;
+}
+
+@media (max-width: 768px) {
+  .control-center {
+    padding: 1rem;
+  }
+
+  .control-center-header {
+    margin: -1rem -1rem 1rem -1rem;
+    padding: 1.5rem;
+  }
+
+  .control-center h2 {
+    font-size: 1.5rem;
+  }
+
+  .stats-cards {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .pending-approvals,
+  .all-users {
+    padding: 1rem;
+  }
+
+  .users-table th,
+  .users-table td {
+    padding: 0.75rem;
+  }
+}

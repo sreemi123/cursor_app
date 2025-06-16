@@ -1,0 +1,378 @@
+.knowledge-hub {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: linear-gradient(to bottom, #f8faff 0%, #ffffff 100%);
+    min-height: 100vh;
+}
+
+.section-title {
+    margin-bottom: 3rem;
+    text-align: center;
+    position: relative;
+    font-size: 2.5rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #202669 0%, #364090 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    width: 100%;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: #f4530e;
+    border-radius: 2px;
+}
+
+.resource-form-container {
+    background: #ffffff;
+    padding: 2.5rem;
+    border-radius: 16px;
+    margin-bottom: 3rem;
+    box-shadow: 0 4px 20px rgba(32, 38, 105, 0.08);
+    border: 1px solid rgba(214, 223, 255, 0.6);
+    position: relative;
+    overflow: hidden;
+}
+
+.resource-form-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: linear-gradient(90deg, #202669 0%, #f4530e 100%);
+}
+
+.resource-form {
+    width: 100%;
+}
+
+.form-group {
+    background: #f8faff;
+    padding: 1.25rem;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid rgba(214, 223, 255, 0.6);
+    transition: all 0.2s ease;
+}
+
+.form-group:hover {
+    background: #ffffff;
+    border-color: rgba(32, 38, 105, 0.2);
+    box-shadow: 0 2px 8px rgba(32, 38, 105, 0.05);
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+    color: #202669;
+    font-size: 0.95rem;
+    letter-spacing: 0.01em;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 0.9rem 1rem;
+    border: 1px solid rgba(214, 223, 255, 0.8);
+    border-radius: 8px;
+    font-size: 0.95rem;
+    transition: all 0.2s;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    color: #202669;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #202669;
+    box-shadow: 0 0 0 3px rgba(32, 38, 105, 0.1);
+}
+
+.form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+    line-height: 1.5;
+}
+
+.resource-form button {
+    background: linear-gradient(135deg, #f4530e 0%, #ff6937 100%);
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    width: auto;
+    min-width: 200px;
+    justify-content: center;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.resource-form button:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(244, 83, 14, 0.25);
+}
+
+.resource-form button:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+.resource-form button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.resource-library {
+    margin-top: 3rem;
+}
+
+.resource-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.resource-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 20px rgba(32, 38, 105, 0.08);
+    border: 1px solid rgba(214, 223, 255, 0.6);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.resource-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to bottom, #202669 0%, #364090 100%);
+    border-radius: 4px 0 0 4px;
+}
+
+.resource-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(32, 38, 105, 0.12);
+}
+
+.resource-title {
+    color: #202669;
+    margin: 0 0 1.25rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.resource-type {
+    display: inline-block;
+    background: linear-gradient(135deg, #d6dfff 0%, #e8edff 100%);
+    color: #202669;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(32, 38, 105, 0.05);
+    border: 1px solid rgba(214, 223, 255, 0.8);
+}
+
+.resource-description {
+    margin: 0.75rem 0;
+    color: #475569;
+    line-height: 1.6;
+}
+
+.resource-contributor {
+    color: #202669;
+    font-weight: 500;
+    margin: 1rem 0;
+}
+
+.resource-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(214, 223, 255, 0.6);
+}
+
+.resource-tag {
+    background: linear-gradient(135deg, #d6dfff 0%, #e8edff 100%);
+    color: #202669;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    box-shadow: 0 2px 4px rgba(32, 38, 105, 0.05);
+    border: 1px solid rgba(214, 223, 255, 0.8);
+    transition: all 0.2s ease;
+}
+
+.resource-tag:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(32, 38, 105, 0.08);
+    background: linear-gradient(135deg, #e8edff 0%, #ffffff 100%);
+}
+
+.resource-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #f4530e;
+    text-decoration: none;
+    font-weight: 500;
+    margin-top: 1rem;
+    transition: all 0.2s;
+}
+
+.resource-link:hover {
+    color: #d3631e;
+    transform: translateX(4px);
+}
+
+.delete-button {
+    background: linear-gradient(135deg, #ff4444 0%, #ff6666 100%);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-top: 1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    letter-spacing: 0.02em;
+}
+
+.delete-button:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 68, 68, 0.25);
+}
+
+.delete-button:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+.delete-button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.error {
+    background: linear-gradient(135deg, #fff5f5 0%, #ffe8e8 100%);
+    color: #dc3545;
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    margin: 1.5rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    border: 1px solid rgba(220, 53, 69, 0.2);
+    box-shadow: 0 2px 8px rgba(220, 53, 69, 0.08);
+}
+
+.success {
+    background: linear-gradient(135deg, #f0fff4 0%, #e6ffec 100%);
+    color: #28a745;
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    margin: 1.5rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    border: 1px solid rgba(40, 167, 69, 0.2);
+    box-shadow: 0 2px 8px rgba(40, 167, 69, 0.08);
+}
+
+.loading {
+    color: #202669;
+    text-align: center;
+    padding: 3rem;
+    font-weight: 500;
+    font-size: 1.1rem;
+    background: linear-gradient(135deg, #f8faff 0%, #ffffff 100%);
+    border-radius: 12px;
+    border: 1px solid rgba(214, 223, 255, 0.6);
+    box-shadow: 0 2px 8px rgba(32, 38, 105, 0.05);
+}
+
+.no-results {
+    text-align: center;
+    color: #475569;
+    font-size: 1.1rem;
+    padding: 3rem;
+    background: linear-gradient(135deg, #f8faff 0%, #ffffff 100%);
+    border-radius: 12px;
+    border: 1px solid rgba(214, 223, 255, 0.6);
+    box-shadow: 0 2px 8px rgba(32, 38, 105, 0.05);
+}
+
+@media (max-width: 768px) {
+    .knowledge-hub {
+        padding: 1.5rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .resource-form-container {
+        padding: 1.5rem;
+    }
+
+    .form-group {
+        padding: 1rem;
+    }
+
+    .resource-card {
+        padding: 1.5rem;
+    }
+
+    .resource-form button,
+    .delete-button {
+        width: 100%;
+        margin: 0.5rem 0;
+    }
+
+    .resource-tags {
+        gap: 0.5rem;
+    }
+
+    .resource-tag {
+        font-size: 0.85rem;
+        padding: 0.4rem 0.8rem;
+    }
+}

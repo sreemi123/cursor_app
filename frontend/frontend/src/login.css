@@ -1,0 +1,142 @@
+/* frontend/src/login.css */
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ef3f1b, #a777e3);
+  padding: 20px;
+}
+
+.login-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.login-title {
+  font-size: 2em;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.login-subtitle {
+  font-size: 1.1em;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input-group {
+  text-align: left;
+}
+
+.input-group label {
+  font-size: 0.9em;
+  color: #555;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1em;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #0f1012;
+  box-shadow: 0 0 5px rgba(110, 142, 251, 0.3);
+}
+
+.login-button {
+  background: #0f0f0f;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1em;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.login-button:hover {
+  background: #5a78e0;
+  transform: translateY(-2px);
+}
+
+.error-message {
+  color: #dc3545;
+  font-size: 0.9em;
+  margin-top: 10px;
+}
+
+.login-links {
+  margin-top: 20px;
+  font-size: 0.9em;
+  color: #666;
+}
+
+.login-links a {
+  color: #050505;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.login-links a:hover {
+  color: #0d0d0e;
+  text-decoration: underline;
+}
+
+.login-links span {
+  margin: 0 10px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .login-card {
+    padding: 20px;
+    max-width: 90%;
+  }
+
+  .login-title {
+    font-size: 1.5em;
+  }
+
+  .login-subtitle {
+    font-size: 1em;
+  }
+}
+
+/* Logo image styling */
+.login-logo {
+  width: 150px;
+  margin-bottom: 20px;
+}

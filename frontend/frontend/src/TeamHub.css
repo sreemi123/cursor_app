@@ -1,0 +1,297 @@
+.team-hub {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.team-hub header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.team-hub h1 {
+  margin: 0;
+  color: #333;
+}
+
+.dark-mode-toggle {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dark-mode-toggle:hover {
+  background-color: #555;
+}
+
+.search-section {
+  margin-bottom: 2rem;
+}
+
+.search-bar {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.managers-section,
+.team-members-section {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.managers-section h2,
+.team-members-section h2 {
+  color: #333;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.managers-section h2 {
+  border-bottom: 2px solid #202669;
+}
+
+.team-members-section h2 {
+  border-bottom: 2px solid #f4530e;
+}
+
+.managers-section {
+  border-left: 4px solid #202669;
+}
+
+.team-members-section {
+  border-left: 4px solid #f4530e;
+}
+
+.member-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.member-card {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.member-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.member-info h3 {
+  margin: 0 0 1rem;
+  color: #333;
+}
+
+.member-info p {
+  margin: 0.5rem 0;
+  color: #666;
+}
+
+.button-row {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.edit-profile-button,
+.connect-button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-weight: 500;
+}
+
+.edit-profile-button {
+  background-color: #007bff;
+  color: white;
+}
+
+.edit-profile-button:hover {
+  background-color: #0056b3;
+}
+
+.connect-button {
+  background-color: #28a745;
+  color: white;
+}
+
+.connect-button:hover {
+  background-color: #218838;
+}
+
+.error-message {
+  color: #dc3545;
+  margin: 1rem 0;
+  padding: 0.5rem;
+  background-color: #f8d7da;
+  border-radius: 4px;
+}
+
+.success-message {
+  color: #28a745;
+  margin: 1rem 0;
+  padding: 0.5rem;
+  background-color: #d4edda;
+  border-radius: 4px;
+}
+
+/* Edit Modal Styles */
+.edit-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.edit-modal-content {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.edit-modal h2 {
+  margin: 0 0 1.5rem;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #333;
+  font-weight: 500;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.button-group {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.save-button,
+.cancel-button {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  flex: 1;
+}
+
+.save-button {
+  background-color: #007bff;
+  color: white;
+}
+
+.save-button:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+.cancel-button {
+  background-color: #6c757d;
+  color: white;
+}
+
+.cancel-button:hover:not(:disabled) {
+  background-color: #5a6268;
+}
+
+button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+.dark-mode .team-hub h1,
+.dark-mode .managers-section h2,
+.dark-mode .team-members-section h2 {
+  color: #fff;
+}
+
+.dark-mode .dark-mode-toggle {
+  background-color: #fff;
+  color: #333;
+}
+
+.dark-mode .member-card {
+  background-color: #2d2d2d;
+}
+
+.dark-mode .member-info h3 {
+  color: #fff;
+}
+
+.dark-mode .member-info p {
+  color: #ccc;
+}
+
+.dark-mode .search-bar {
+  background-color: #2d2d2d;
+  border-color: #444;
+  color: #fff;
+}
+
+.dark-mode .managers-section,
+.dark-mode .team-members-section {
+  background-color: #2d2d2d;
+}
+
+.dark-mode .edit-modal-content {
+  background-color: #2d2d2d;
+}
+
+.dark-mode .form-group label {
+  color: #fff;
+}
+
+.dark-mode .form-group input {
+  background-color: #1a1a1a;
+  border-color: #444;
+  color: #fff;
+}
